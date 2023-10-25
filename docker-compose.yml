@@ -1,0 +1,12 @@
+services:
+  nginx:
+    build: .
+    env_file: .env
+    restart: always
+    ports:
+      - 80:80
+    # volumes:
+    #   - static_volume:/code/collected_static
+
+# volumes:
+#   static_volume:
