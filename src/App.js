@@ -6,7 +6,10 @@ function App() {
   const handleClick = () => {
     fetch(
       'api/search_video?keyword=tabla',
-      //  {headers: {'x-api-key': 'OIkF94OGYmQyG0e4Ib3s4xmsgzzuxFv3QqQBplx4'}}
+       ).then(r=>r.json()).then(json=> console.log(json))
+    
+    fetch(
+      'search/?q=aws tutorial',
        ).then(r=>r.json()).then(json=> console.log(json))
     }
 

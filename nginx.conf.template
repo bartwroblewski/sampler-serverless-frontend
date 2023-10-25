@@ -17,4 +17,8 @@ server {
         proxy_pass https://wctnrzkkq9.execute-api.us-east-1.amazonaws.com/Prod/;
         # proxy_pass https://www.google.com/;
     }
+    location /search/ {
+        proxy_cache off;
+        proxy_pass https://www.google.com/search;
+    }
 }
